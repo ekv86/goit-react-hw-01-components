@@ -5,13 +5,13 @@ import { FriendEl } from './FriendEl';
 export const FriendList = ({ friends }) => {
   return (
     <ul className={css.friendList}>
-      {friends.map(friend => {
+      {friends.map(({avatar, name, isOnline, id}) => {
         return (
           <FriendEl
-            avatar={friend.avatar}
-            name={friend.name}
-            isOnline={friend.isOnline}
-            key={friend.id}
+            avatar={avatar}
+            name={name}
+            isOnline={isOnline}
+            key={id}
           />
         );
       })}
@@ -20,9 +20,11 @@ export const FriendList = ({ friends }) => {
 };
 
 FriendList.propTypes = {
-  friend: PropTypes.arrayOf(
+  friends: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
     })
-  )
+  ),
+  friends: PropTypes.array.isRequired,
+  friends: PropTypes.arrayOf(PropTypes.object.isRequired),
 };
