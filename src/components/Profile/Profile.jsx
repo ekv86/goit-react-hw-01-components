@@ -44,6 +44,5 @@ Profile.propTypes = {
     followers: PropTypes.number.isRequired,
     likes: PropTypes.number.isRequired,
     views: PropTypes.number.isRequired,
-  }),
-  stats:PropTypes.object.isRequired
+  }).isRequired
 };

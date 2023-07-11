@@ -24,7 +24,5 @@ FriendList.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
     })
-  ),
-  friends: PropTypes.array.isRequired,
-  friends: PropTypes.arrayOf(PropTypes.object.isRequired),
+  ).isRequired
 };

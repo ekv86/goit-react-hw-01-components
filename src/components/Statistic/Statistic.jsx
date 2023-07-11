@@ -28,9 +28,7 @@ Statistic.propTypes = {
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
     })
-  ),
-  stats: PropTypes.array.isRequired,
-  stats: PropTypes.arrayOf(PropTypes.object.isRequired)
+  ).isRequired
 };
 
 function getRandomHexColor() {
